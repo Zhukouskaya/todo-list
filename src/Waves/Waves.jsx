@@ -4,7 +4,7 @@ import waves from './img/wave.svg'
 function Waves ({ onCreate }) {
   return (
     <div className="waves">
-      <img src= { waves } />
+      <img src= { waves } alt="waves-img"/>
     </div>
   )
 }
