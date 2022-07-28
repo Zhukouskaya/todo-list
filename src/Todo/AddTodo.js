@@ -17,7 +17,7 @@ function AddTodo ({ onCreate }) {
   return (
     <form onSubmit={submitHandler}>
       <input value={value} onChange={event => setValue(event.target.value)}/>
-      <button type="submit"> Add todo!</button>
+      <button className="add" type="submit"> Add todo!</button>
     </form>
   )
 }
