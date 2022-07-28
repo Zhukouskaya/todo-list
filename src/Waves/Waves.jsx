@@ -9,5 +9,4 @@ function Waves ({ onCreate }) {
   )
 }
 
-
 export default Waves
