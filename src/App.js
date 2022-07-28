@@ -2,6 +2,7 @@ import React from 'react'
 import TodoList from './Todo/TodoList'
 import Context from './context';
 import AddTodo from './Todo/AddTodo'
+import Waves from './Waves/Waves';
 
 function App() {
   const [todos, setTodos] = React.useState([
@@ -35,14 +36,18 @@ function App() {
   return (
     <Context.Provider value={{ removeTodo }}>
       <div className='wrapper'>
-        <h1>ToDo List</h1>
-        <AddTodo onCreate={addTodo}/>
-        {todos.length ? (
-          <TodoList todos={todos} onToggle={toggleTodo}/>
-        ) : (
-          <p>No todos!</p>
-        )}
+        <div className='content'>
+            <h1>ToDo List</h1>
+          <AddTodo onCreate={addTodo}/>
+          {todos.length ? (
+            <TodoList todos={todos} onToggle={toggleTodo}/>
+          ) : (
+            <p>No todos!</p>
+          )}
+        </div>
+        <Waves />
       </div>
+      
     </Context.Provider>
   );
 }
