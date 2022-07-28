@@ -12,7 +12,11 @@ function TodoItem({ todo, index, onChange }) {
   return (
     <li>
     <span className={classes.join(' ')}>
-      <input type='checkbox' checked={todo.completed} onChange={() =>onChange(todo.id)}/>
+      <label>
+        <input className="checkbox" type='checkbox' checked={todo.completed} onChange={() =>onChange(todo.id)}/>
+        <span className="new-checkbox"></span>
+      </label>
+      
       <strong>{index +1}</strong>
       &nbsp;
       <span className="title">{todo.title}</span>

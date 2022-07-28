@@ -23,6 +23,14 @@ body {
 
 h1 {
   text-align: center;
+  color: #F1F3CE;
+}
+
+.no-todos {
+  color: #F1F3CE;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 ul {
@@ -58,7 +66,7 @@ form input {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   padding: 0.7rem 1.5rem ;
-  width: 28rem;
+  width: 35.8rem;
   opacity: 0.7;
 }
 
@@ -91,7 +99,7 @@ form {
 }
 
 .add {
-  padding: .7rem 1.5rem;
+  padding: .7rem 2.5rem;
   background-color:  #F1F3CE;
   color: #00293C;
   border: 1px solid  #F1F3CE;
@@ -113,5 +121,29 @@ form {
   color: #F1F3CE;
   border: 1px solid #F1F3CE;
   transition: 0.3s;
+}
+
+.checkbox {
+  display: none;
+}
+
+.new-checkbox {
+  height: 12px;
+  width: 12px;
+  border: 1px solid #00293C;
+  display: inline-block;
+  position: relative;
+  background-color:#F1F3CE;
+  border-radius:2px;
+  padding:3px;
+  margin-right: .5rem;
+}
+[type=checkbox]:checked + .new-checkbox:before {
+  content: '\2714';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  font-size:23px;
+  color:#1E656D;
 }
 

@@ -42,7 +42,7 @@ function App() {
           {todos.length ? (
             <TodoList todos={todos} onToggle={toggleTodo}/>
           ) : (
-            <p>No todos!</p>
+            <p className='no-todos'>No todos!</p>
           )}
         </div>
         <Waves />
